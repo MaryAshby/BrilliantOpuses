@@ -16,7 +16,7 @@ font-family: Times;
   opacity: 0.5;
 }
 
-ul
+ol, ul
 {
   padding: 25px;
   border: 5px;
