@@ -1,12 +1,20 @@
 body
 {
 width: 800px;
-  background-image: url("background.jpg");
+  background-image: url("background.jpg"), 0.5;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  background-opacity: 0.5;
 background-color: #F4EBD9;
 color: #343434;
 font-family: Times;
+  font-size: 20px;
+}
+
+ul
+{
+  padding: 25px;
+  border: 5px;
+  border-color: #058ED9;
+  background: #f4EBD9;
 }
