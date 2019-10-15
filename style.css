@@ -1,6 +1,11 @@
 body
 {
 width: 800px;
+  background-image: url("background.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-opacity: 0.5;
 background-color: #F4EBD9;
 color: #343434;
 font-family: Times;
