@@ -50,7 +50,7 @@ font-size: 18px;
  background-color: #FEECB7;
 }
 
-input[type=text], input[type=file], select 
+input[type=text], select 
 {
   width: 100%;
   padding: 12px 20px;
