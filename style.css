@@ -1,7 +1,7 @@
 body
 {
 width: 800px;
-  background-image: url("background.jpg");
+  background-image: url("background.jpg") opacity:0.5;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -9,11 +9,6 @@ background-color: #F4EBD9;
 color: #343434;
 font-family: Times;
   font-size: 20px;
-}
-
-.backgroundopc
-{
-  opacity: 0.5;
 }
 
 a:link
@@ -88,4 +83,6 @@ h1
  font-family: Bookman;
  font-size: 36px;
  font-style: bold;
+ background-color: #FEECB7;
+ text-align: center;
 }
