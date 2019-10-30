@@ -16,10 +16,83 @@ font-family: Times;
   opacity: 0.5;
 }
 
-ol, ul
+a:link
 {
-  padding: 25px;
-  border: 5px;
-  border-color: #058ED9;
-  background-color: #f4EBD9;
+ font-family: Arial;
+  font-size: 16px;
+  background-color:  #464159;
+ color: white;
+  text-transform: capitalize;
+  padding: 14px 25px;
+  text-align: center;
+  display: inline-block;
+ border-radius: 25px;
+}
+
+a:hover, a:active 
+{
+  background-color: #6c7b95;
+}
+
+a:visited 
+{
+  color: #d7f4e5;
+   display: inline-block;
+}
+
+p
+{
+ font-family: Arial;
+ font-size: 18px;
+}
+
+table
+{
+ padding: 8px 8px;
+ width: 800px;
+}
+
+label
+{
+font-family: Arial;
+font-size: 18px;
+ padding: 6px 20px;
+ border: 1px solid #FEECB7;
+ border-top-right-radius: 25px; 
+ background-color: #FEECB7;
+}
+
+input[type=text], input[type=file], select 
+{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #c7f0db;
+  border-radius: 4px;
+  box-sizing: border-box;
+ background-color: white;
+}
+
+input[type=submit] 
+{
+  width: 100%;
+  background-color: #FEECB7;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover 
+{
+  background-color: #4CAF50;
+}
+
+h1
+{
+ font-family: Bookman;
+ font-size: 36px;
+ font-style: bold;
 }
