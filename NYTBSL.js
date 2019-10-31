@@ -1,28 +1,26 @@
-//key 1koWnqTA52klgXEgxygUqAjVc372SrnL//
+var value = $('form').serialize() 
 
-var setBanner = function(message)
-            {
-             d3.select("#banner").text(message);
-            }
+var key = ".json?api-key=1koWnqTA52klgXEgxygUqAjVc372SrnL"
 
-var listPromise = d3.json("https://api.nytimes.com/svc/books/v3/lists.json")
-         listPromise.then(function(NYTlist)
-            {
-            setBanner("Search the New York Times Best Seller Lists");
-             },
-          function(err)
-            {
-            setBanner("NYT Best Seller Lists Currently Not Available");
-             });
+var baseURL =  "https://api.nytimes.com/svc/books/v3/lists/current/"
 
-            .show 
-            {
-             display:block;
-            }
+var urls = ["baseURL"+"value"+"key"]
 
-function listFunction() 
-            {
-            document.getElementById("listDropDown").classList.toggle("show");
-            }
 
+var listPromise = urls.map(function(url)
+{
+       return d3.jason(url);
+})
+
+            
+
+
+//calls//
+//https://api.nytimes.com/svc/books/v3//
+
+//for current lists//
+//https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction.json?api-key=1koWnqTA52klgXEgxygUqAjVc372SrnL//
+
+//for exact dates//
+//https://api.nytimes.com/svc/books/v3/lists/2019-01-20/hardcover-fiction.json?api-key=1koWnqTA52klgXEgxygUqAjVc372SrnL//
 
