@@ -5,7 +5,7 @@ width: 800px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-background-color: #F4EBD9;
+background-color: #E5D3BB;
 color: #343434;
 font-family: Times;
   font-size: 20px;
@@ -15,7 +15,7 @@ font-family: Times;
 .Notes a:link
 {
   font-size: 16px;
-  background-color:  #FEECB7;
+  background-color:  ##E5D3BB;
   color: black;
   padding: 14px 25px;
   text-align: center;
@@ -25,7 +25,7 @@ font-family: Times;
 
 .Notes a:hover, a:active
 {
-  background-color: #6c7b95;
+  background-color: #18586F;
 }
 
 h1
@@ -33,7 +33,7 @@ h1
  font-family: Bookman;
  font-size: 36px;
  font-style: bold;
- background-color: #FEECB7;
+ background-color: ##E5D3BB;
  text-align: center;
  border-radius: 15px;
 }
@@ -42,30 +42,22 @@ p
 {
  font-family: Arial;
  font-size: 18px;
- background-color: #FEECB7;
+ background-color: ##E5D3BB;
  padding-left: 15px;
  border-radius: 15px;
 }
 
 /*form*/
 
- .bsListDrop
- {
-  background-color: #FEECB7;
-  padding: 6px 20px;
-  font-size: 18px;
-  border: 1px solid #FEECB7;
-  border-top-right-radius: 25px; 
-}
 
 label
 {
 font-family: Arial;
 font-size: 18px;
  padding: 6px 20px;
- border: 1px solid #FEECB7;
+ border: 1px solid ##E5D3BB;
  border-top-right-radius: 25px; 
- background-color: #FEECB7;
+ background-color: ##E5D3BB;
 }
 
 input[type=text]
@@ -83,15 +75,32 @@ input[type=text]
 input[type=submit]
 {
   font-size: 16px;
-  background-color:  #FEECB7;
+  background-color:  #E5D3BB;
   padding: 14px 25px;
   text-align: center;
   display: inline-block;
-  border: 1px solid #FEECB7;
- border-radius: 20px;
+  border: 1px solid #E5D3BB;
+  border-radius: 20px;
   width: 100%;
 }
 
+/*table*/
+
+table
+{
+  font-size: 14px;
+  background-color:##E5D3BB;
+  border: 5px solid #18586F;
+  width: 100%;
+}
+
+thead
+{
+  padding: 20px 50px;
+  text-align: center;
+  font-family: Arial;
+  font-size: 16px:
+}
 
 
 
