@@ -8,19 +8,20 @@
   
   <body>
     
-  
-  <a href="Notes.html" class="w3-button w3-black">NOTES</a>
-    
+  <div class="Notes">
+  <a href="Notes.html">NOTES</a>
+    </div>
 
     <h1 id="banner">Loading the New York Times Best Seller Lists</h1>
     
-    <form class="search" action="/searchLists" method="post" enctype="multipart/form-data">
+   
       <p>
         Select the Best Seller List you would like to see.
       </p>
+    
       <div class="bsListDrop">
-  <button onclick="myFunction()" id="bsList">Best Seller Lists</button>
-  <div id="listDropDown" id="content">
+  <button onclick="listFunction()" id="bsList">Best Seller Lists</button>
+  <div class="listDropDown" class="content">
     <a href="">Print & eBook Fiction</a>
     <a href="">Print & eBook Non-Fiction</a>
     <a href="">Young Adult Hardcover</a>
@@ -32,7 +33,9 @@
 
        
        <label id="bsDate">Best Sellers Date</label>
-      <p>"The week-ending date for the sales reflected on list-name. Times best sellers
+    
+      <p>
+        "The week-ending date for the sales reflected on list-name. Times best sellers
         lists are compiled using available book sale data. The bestsellers-date may be significantly earlier than published-date." (NYT)
         <br/>
         
