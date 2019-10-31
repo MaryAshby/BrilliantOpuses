@@ -69,7 +69,7 @@ p
 {
   display: none;
   position: absolute;
-  background-color: #b63ff;
+  background-color: #b63fff;
   min-width: 100%;
   overflow: auto;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
@@ -94,7 +94,7 @@ p
   display: block;
 }
 
-/*labels and inputs*/
+/*form*/
 
 label
 {
