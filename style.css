@@ -47,9 +47,9 @@ p
  border-radius: 15px;
 }
 
-/*dropdown menu*/
+/*form*/
 
- .bsList
+ .bsList, .bsListDrop
  {
   background-color: #FEECB7;
   color: black;
@@ -59,43 +59,6 @@ p
   border-top-right-radius: 25px; 
   cursor: pointer;
 }
-
-.bsListDrop
-{
-  position: relative;
-  display: inline-block;
-}
-
-.content
-{
-  display: none;
-  position: absolute;
-  background-color: #b6e4ff;
-  min-width: 100%;
-  overflow: auto;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
-  z-index: 1;
- }
-
-.content a 
-{
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-.content:hover
-{
-  background-color: #b63ff;
-}
-
-.bsListDrop:hover .content 
-{
-  display: block;
-}
-
-/*form*/
 
 label
 {
