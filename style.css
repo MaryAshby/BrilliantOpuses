@@ -14,14 +14,13 @@ font-family: Times;
 
 .Notes a:link
 {
- font-family: Arial;
   font-size: 16px;
   background-color:  #FEECB7;
   color: black;
   padding: 14px 25px;
   text-align: center;
   display: inline-block;
- border-radius: 25px;
+ border-radius: 20px;
 }
 
 .Notes a:hover, a:active 
@@ -48,15 +47,9 @@ p
  border-radius: 15px;
 }
 
-label
-{
-font-family: Arial;
-font-size: 18px;
- padding: 6px 20px;
- border: 1px solid #FEECB7;
- border-top-right-radius: 25px; 
- background-color: #FEECB7;
-}
+/*From here up good*/
+
+/*dropdown menu*/
 
  .bsList
  {
@@ -72,19 +65,6 @@ font-size: 18px;
 {
   background-color: #b63ff;
 }
-
-input[type=text], select 
-{
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #c7f0db;
-  border-radius: 4px;
-  box-sizing: border-box;
- background-color: white;
-}
-
 
 .listDropDown
 {
