@@ -20,7 +20,7 @@ var listPromise = d3.json("https://api.nytimes.com/svc/books/v3/lists.json")
              display:block;
             }
 
-var drop = listFunction() 
+function listFunction() 
             {
             document.getElementById("listDropDown").classList.toggle("show");
             }
