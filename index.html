@@ -16,21 +16,45 @@
     
    
       <p>
-        Select the Best Seller List you would like to see from the drop down menu.
+        Select the Best Seller List you would like to see from the drop down menu. 
+        <br/>
+        This is a required field.
       </p>
     
       <div class="bsListDrop">
          <button class="bsList">Best Seller Lists</button>
            <div class="content">
-  
-              <a href="https://google.com">Google Test</a>
-              <a href="https://www.facebook.com/">Facebook Test</a>
-  
+              <a href="">Print & eBook Fiction</a>
+              <a href="">Print & eBook Non-Fiction</a>
+              <a href="">Young Adult Hardcover</a>
+              <a href="">Graphic Novels & Manga</a>
            </div>
       </div>
 
-       
+    <p>
+        Times best seller lists are compiled using available book sale data. <br/>
+        The bestsellers-date may be significantly earlier than published in the New York Times Date.<br/>
+      Date format: YYYY-MM-DD 
+    </p>
+ 
+    <form action="/action_page.php">
+    
+      <label id="bsDate">Best Sellers Date</label>
+      <input type="text" id="bSellDate" placeholder="YYYY-MM-DD">
       
+       <p>
+        The date the best sellers list was published on NYTimes.com. Use "current" for the latest list.
+        <br/>
+        Date Format YYYY-MM-DD
+      </p>
+
+    
+      <label id="bsPubDate">Publish Date</label>
+      <input type="text" id="pubDate" placeholder="YYYY-MM-DD">
+     
+      <input type="submit" value="Submit">
+      
+    </form>
     
   </body>
   <footer>
