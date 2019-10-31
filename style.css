@@ -42,13 +42,13 @@ h1
 p
 {
  font-family: Arial;
- font-size: 16px;
+ font-size: 18px;
  background-color: #FEECB7;
  padding-left: 15px;
  border-radius: 15px;
 }
 
-.bsListDrop
+.bsList
 {
   font-family: Arial;
   font-size: 16px;
