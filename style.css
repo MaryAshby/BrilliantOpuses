@@ -48,20 +48,7 @@ p
  border-radius: 15px;
 }
 
-.bsList
-{
-  font-family: Arial;
-  font-size: 16px;
-  background-color:  #FEECB7;
-  color: black;
-  padding: 14px 25px;
-  text-align: center;
-  display: inline-block;
- border-radius: 25px;
-}
-  
-
-label
+label, #bsList
 {
 font-family: Arial;
 font-size: 18px;
