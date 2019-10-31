@@ -1,3 +1,5 @@
+/*load all data and make sure it works*/
+
 var setgoodNews = function(message)
 {
     d3.select(".goodNews").text(message);
@@ -51,6 +53,15 @@ var listPromise =
           console.log("broke4",err);
 })           
 
+function firstFunction() {
+  var x = document.createElement("FORM");
+  x.setAttribute("Author", "myForm");
+  document.body.appendChild(x);
+
+  var y = document.createElement("INPUT");
+  y.setAttribute("type", "text");
+  document.getElementById("myForm").appendChild(y);
+}
 
 //calls//
 //https://api.nytimes.com/svc/books/v3//
