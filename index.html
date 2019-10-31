@@ -14,7 +14,7 @@
 
     <h1 id="banner">Loading the New York Times Best Seller Lists</h1>
     
-   
+    <form action="/action_page.php" target="_blank" method="get">
       <p>
         Select the Best Seller List you would like to see from the drop down menu. 
         <br/>
@@ -22,13 +22,12 @@
       </p>
     
       <div class="bsListDrop">
-         <button class="bsList">Best Seller Lists</button>
-           <div class="content">
-              <a href="">Print & eBook Fiction</a>
-              <a href="">Print & eBook Non-Fiction</a>
-              <a href="">Young Adult Hardcover</a>
-              <a href="">Graphic Novels & Manga</a>
-           </div>
+         <label class="bsList">Best Seller Lists</label>
+         <input type="radio" name="List" value="Print & eBook Fiction">Print & eBook Fiction<br>
+         <input type="radio" name="List" value="Print & eBook Non-Fiction"> Print & eBook Non-Fiction<br>
+         <input type="radio" name="List" value="Young Adult Hardcover"> Young Adult Hardcover<br>
+         <input type="radio" name="List" value="Graphic Novels & Manga"> Graphic Novels & Manga<br>   
+           
       </div>
 
     <p>
@@ -36,8 +35,6 @@
         The bestsellers-date may be significantly earlier than published in the New York Times Date.<br/>
       Date format: YYYY-MM-DD 
     </p>
- 
-    <form action="/action_page.php">
     
       <label id="bsDate">Best Sellers Date</label>
       <input type="text" id="bSellDate" placeholder="YYYY-MM-DD">
