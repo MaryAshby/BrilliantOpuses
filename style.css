@@ -12,7 +12,7 @@ font-family: Times;
   padding-left: 25px;
 }
 
-.Notes a:link, .submitBut a:link
+.Notes a:link
 {
   font-size: 16px;
   background-color:  #FEECB7;
@@ -23,7 +23,7 @@ font-family: Times;
  border-radius: 20px;
 }
 
-.Notes a:hover, a:active, .submitBut a:hover, a:active 
+.Notes a:hover, a:active
 {
   background-color: #6c7b95;
 }
@@ -78,6 +78,21 @@ input[type=text]
   border-radius: 4px;
   box-sizing: border-box;
  background-color: white;
+}
+
+input[type=submit] a:link
+{
+  font-size: 16px;
+  background-color:  #FEECB7;
+  padding: 14px 25px;
+  text-align: center;
+  display: inline-block;
+ border-radius: 20px;
+}
+
+input[type=submit] a:hover, a:active
+{
+  background-color: #6c7b95;
 }
 
 
