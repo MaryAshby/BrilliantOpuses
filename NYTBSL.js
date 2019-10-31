@@ -4,10 +4,16 @@ var key = ".json?api-key=1koWnqTA52klgXEgxygUqAjVc372SrnL";
 
 var baseURL =  "https://api.nytimes.com/svc/books/v3/lists/current/";
 
-fetch('https://api.nytimes.com/svc/books/v3/ists/current/hardcover-fiction.json?api-key=1koWnqTA52klgXEgxygUqAjVc372SrnL, {    method: 'get',  }) 
-          .then(response => { return response.json(); })  
-          .then(json => { console.log(json); });
-
+var listPromise = d3.json('https://api.nytimes.com/svc/books/v3/ists/current/hardcover-fiction.json?api-key=1koWnqTA52klgXEgxygUqAjVc372SrnL);
+         listPromise.then(function(listData)
+{
+          console.log ("works", listData);
+},
+          function(err)
+{
+          console.log("broke",err)
+})
+                         
 
 
 
