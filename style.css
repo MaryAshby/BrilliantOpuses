@@ -61,12 +61,13 @@ p
   cursor: pointer;
 }
 
-.bsList:hover, .bsList:focus 
+.bsListDrop
 {
-  background-color: #b63ff;
+  position: relative;
+  display: inline-block;
 }
 
-.listDropDown
+.content
 {
   display: none;
   position: absolute;
@@ -75,12 +76,7 @@ p
   overflow: auto;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
-}
-
-.show 
-{
-  display: block;
-}
+ }
 
 .content a 
 {
@@ -89,3 +85,14 @@ p
   text-decoration: none;
   display: block;
 }
+
+.content:hover
+{
+  background-color: #b63ff;
+}
+
+.bsListDrop:hover .content 
+{
+  display: block;
+}
+
