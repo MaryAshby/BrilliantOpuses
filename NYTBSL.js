@@ -79,6 +79,8 @@ var sortColumn = function(books, col, accessor)
     })
 }
 
+//makes header and allows sort by headers//
+
 var makeTableHeader = function(books)
 {d3.select("#rank")
    .on("click", function()
@@ -89,10 +91,12 @@ var makeTableHeader = function(books)
                              }), "ALL")
 })
  
+ //add columns & rows to table//
  var addCol = function(rows, fcn)
  {
      rows.append("td").text(fcn);
  }
+ 
  
  var makeTable = function(books, mode)
  {
@@ -114,6 +118,8 @@ var makeTableHeader = function(books)
      addCol(rows, function(books){return results.book_details.title})
      addCol(rows, function(books){return results.book_details.author})
      addCol(rows, function(books){return results.book_details.description})
+     
+
      
   
  
