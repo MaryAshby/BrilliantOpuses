@@ -13,12 +13,23 @@
     
 
     <h1 id="banner">Loading the New York Times Best Seller Lists</h1>
+    
     <form class="search" action="/searchLists" method="post" enctype="multipart/form-data">
-     <label id="bsList">Best Seller List</label>
       <p>
         Select the Best Seller List you would like to see.
       </p>
-      <input type="text">
+      <div class="bsListDrop">
+  <button onclick="myFunction()" id="bsList">Best Seller Lists</button>
+  <div id="listDropDown" id="content">
+    <a href="">Print & eBook Fiction</a>
+    <a href="">Print & eBook Non-Fiction</a>
+    <a href="">Young Adult Hardcover</a>
+    <a href="https://api.nytimes.com/svc/books/v3/lists.json?list=graphic%20books%20and%20manga&api-key=[1koWnqTA52klgXEgxygUqAjVc372SrnL] 
+             ">Graphic Books and Manga</a>
+  
+  </div>
+</div>
+
        
        <label id="bsDate">Best Sellers Date</label>
       <p>"The week-ending date for the sales reflected on list-name. Times best sellers
