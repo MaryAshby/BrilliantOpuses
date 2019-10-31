@@ -49,15 +49,13 @@ p
 
 /*form*/
 
- .bsList, .bsListDrop
+ .bsListDrop
  {
   background-color: #FEECB7;
-  color: black;
   padding: 6px 20px;
   font-size: 18px;
   border: 1px solid #FEECB7;
   border-top-right-radius: 25px; 
-  cursor: pointer;
 }
 
 label
