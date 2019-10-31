@@ -6,8 +6,7 @@ var setBanner = function(message)
             }
 
 var listPromise = d3.jason("https://api.nytimes.com/svc/books/v3/lists.json")
-         listPromise.then(
-         function(NYTlist)
+         listPromise.then(function(NYTlist)
             {
             setBanner("Search the New York Times Best Seller Lists");
              },
