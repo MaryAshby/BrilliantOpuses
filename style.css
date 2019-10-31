@@ -94,5 +94,29 @@ p
   display: block;
 }
 
+/*labels and inputs*/
+
+label
+{
+font-family: Arial;
+font-size: 18px;
+ padding: 6px 20px;
+ border: 1px solid #FEECB7;
+ border-top-right-radius: 25px; 
+ background-color: #FEECB7;
+}
+
+input[type=text]
+{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #c7f0db;
+  border-radius: 4px;
+  box-sizing: border-box;
+ background-color: white;
+}
+
 
 
