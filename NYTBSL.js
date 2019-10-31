@@ -53,6 +53,7 @@ var listPromise =
           console.log("broke4",err);
 })           
 
+//onclick call//
 function firstFunction() {
   var x = document.createElement("FORM");
   x.setAttribute("Author", "myForm");
@@ -62,6 +63,35 @@ function firstFunction() {
   y.setAttribute("type", "text");
   document.getElementById("myForm").appendChild(y);
 }
+
+//Table Creation//
+
+var sortColumn = function(books, col, accessor)
+{
+    d3.select(col)
+      .on("click", function()
+          {
+          books.sort(function(a,b)
+                     {
+                     return(accessor(a)accessor(b));
+                     })
+        makeTable(books,"ALL");
+    })
+}
+
+var makeTableHeader = function(books)
+{d3.select("#rank")
+   .on("click", function()
+       {
+        makeTable(books.sort(function(a, b)
+                             {
+                              return a-b
+                             }), "ALL")
+})
+ 
+                             
+
+
 
 //calls//
 //https://api.nytimes.com/svc/books/v3//
