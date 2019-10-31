@@ -12,7 +12,7 @@ font-family: Times;
   padding-left: 25px;
 }
 
-.Notes a:link
+.Notes a:link, .submitBut a:link
 {
   font-size: 16px;
   background-color:  #FEECB7;
@@ -23,7 +23,7 @@ font-family: Times;
  border-radius: 20px;
 }
 
-.Notes a:hover, a:active 
+.Notes a:hover, a:active, .submitBut a:hover, a:active 
 {
   background-color: #6c7b95;
 }
