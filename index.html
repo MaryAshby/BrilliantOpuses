@@ -14,13 +14,28 @@
 
     <h1 id="banner">Loading the New York Times Best Seller Lists</h1>
     <form class="search" action="/searchLists" method="post" enctype="multipart/form-data">
-     <label>List</label>
+     <label id="bsList">Best Seller List</label>
+      <p>
+        Select the Best Seller List you would like to see.
+      </p>
       <input type="text">
        
-       <label>Best Sellers Date</label>
+       <label id="bsDate">Best Sellers Date</label>
+      <p>"The week-ending date for the sales reflected on list-name. Times best sellers
+        lists are compiled using available book sale data. The bestsellers-date may be significantly earlier than published-date." (NYT)
+        <br/>
+        
+        Date Format YYYY-MM-DD
+      </p>
          <input type="text">
+    
       
-         <label>Publish Date</label>
+         <label="bsPubDate">Publish Date</label>
+      <p>
+        The date the best sellers list was published on NYTimes.com. Use "current" for the latest list.
+        <br/>
+        Date Format YYYY-MM-DD
+      </p>
            <input type="text">
           
     
