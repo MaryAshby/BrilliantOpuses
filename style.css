@@ -55,7 +55,8 @@ p
   color: black;
   padding: 6px 20px;
   font-size: 18px;
-  border: none;
+  border: 1px solid #FEECB7;
+  border-top-right-radius: 25px; 
   cursor: pointer;
 }
 
@@ -69,7 +70,7 @@ p
 {
   display: none;
   position: absolute;
-  background-color: #b63fff;
+  background-color: #b6e4ff;
   min-width: 100%;
   overflow: auto;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
