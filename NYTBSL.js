@@ -1,10 +1,10 @@
-var value = $('form').serialize() 
+var resValue = $("form").serialize(value) 
 
 var key = ".json?api-key=1koWnqTA52klgXEgxygUqAjVc372SrnL"
 
 var baseURL =  "https://api.nytimes.com/svc/books/v3/lists/current/"
 
-var urls = ["baseURL"+"value"+"key"]
+var urls = ["baseURL"+"resValue"+"key"]
 
 
 var listPromise = urls.map(function(url)
