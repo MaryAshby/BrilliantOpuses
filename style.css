@@ -80,7 +80,7 @@ input[type=text]
  background-color: white;
 }
 
-input[type=submit] a:link
+input[type=submit]
 {
   font-size: 16px;
   background-color:  #FEECB7;
@@ -90,10 +90,6 @@ input[type=submit] a:link
  border-radius: 20px;
 }
 
-input[type=submit] a:hover, a:active
-{
-  background-color: #6c7b95;
-}
 
 
 
