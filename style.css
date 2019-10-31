@@ -48,7 +48,7 @@ p
  border-radius: 15px;
 }
 
-label, #bsList
+label
 {
 font-family: Arial;
 font-size: 18px;
@@ -56,6 +56,21 @@ font-size: 18px;
  border: 1px solid #FEECB7;
  border-top-right-radius: 25px; 
  background-color: #FEECB7;
+}
+
+ .bsList
+ {
+  background-color: #FEECB7;
+  color: black;
+  padding: 6px 20px;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+}
+
+.bsList:hover, .bsList:focus 
+{
+  background-color: #b63ff;
 }
 
 input[type=text], select 
@@ -80,6 +95,11 @@ input[type=text], select
   overflow: auto;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
+}
+
+.show 
+{
+  display: block;
 }
 
 .content a 
