@@ -12,21 +12,31 @@ font-family: Times;
   padding-left: 25px;
 }
 
-.Notes.a:link
+.Notes a:link
 {
  font-family: Arial;
   font-size: 16px;
   background-color:  #FEECB7;
- color: black;
+  color: black;
   padding: 14px 25px;
   text-align: center;
   display: inline-block;
  border-radius: 25px;
 }
 
-.Notes.a:hover, a:active 
+.Notes a:hover, a:active 
 {
   background-color: #6c7b95;
+}
+
+h1
+{
+ font-family: Bookman;
+ font-size: 36px;
+ font-style: bold;
+ background-color: #FEECB7;
+ text-align: center;
+ border-radius: 15px;
 }
 
 p
@@ -34,7 +44,22 @@ p
  font-family: Arial;
  font-size: 16px;
  background-color: #FEECB7;
+ padding-left: 15px;
+ border-radius: 15px;
 }
+
+.bsListDrop
+{
+  font-family: Arial;
+  font-size: 16px;
+  background-color:  #FEECB7;
+  color: black;
+  padding: 14px 25px;
+  text-align: center;
+  display: inline-block;
+ border-radius: 25px;
+}
+  
 
 label
 {
@@ -58,16 +83,10 @@ input[type=text], select
  background-color: white;
 }
 
-h1
-{
- font-family: Bookman;
- font-size: 36px;
- font-style: bold;
- background-color: #FEECB7;
- text-align: center;
-}
 
-function listFunction() {
+
+function listFunction() 
+{
   document.getElementById("listDropDown").classList.toggle("show");
 }
 
@@ -83,7 +102,8 @@ function listFunction() {
   z-index: 1;
 }
 
-.content a {
+.content a 
+{
   color: black;
   padding: 12px 16px;
   text-decoration: none;
