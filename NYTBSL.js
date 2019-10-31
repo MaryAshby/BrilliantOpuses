@@ -89,6 +89,34 @@ var makeTableHeader = function(books)
                              }), "ALL")
 })
  
+ var addCol = function(rows, fcn)
+ {
+     rows.append("td").text(fcn);
+ }
+ 
+ var makeTable = function(books, mode)
+ {
+     d3.selectAll("tbody*").remove();
+     
+     var rows = d3.select("tbody")
+                  .selectAll("tr")
+                  .data(filterbooks(books, mode))
+                  .enter()
+                  .append("tr");
+     addCol(rows, function(books)
+            {
+             return book.rank
+            })
+            .attr("alt", function(books)
+                  {
+                   return results.rank;
+                   })
+     addCol(rows, function(books){return results.book_details.title})
+     addCol(rows, function(books){return results.book_details.author})
+     addCol(rows, function(books){return results.book_details.description})
+     
+  
+ 
                              
 
 
