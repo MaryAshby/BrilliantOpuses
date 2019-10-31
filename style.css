@@ -9,6 +9,7 @@ background-color: #F4EBD9;
 color: #343434;
 font-family: Times;
   font-size: 20px;
+  padding-left: 25px;
 }
 
 a:link
@@ -37,7 +38,8 @@ a:visited
 p
 {
  font-family: Arial;
- font-size: 18px;
+ font-size: 16px;
+ background-color: #FEECB7;
 }
 
 label
