@@ -84,13 +84,6 @@ input[type=text], select
 }
 
 
-
-function listFunction() 
-{
-  document.getElementById("listDropDown").classList.toggle("show");
-}
-
-
 .listDropDown
 {
   display: none;
