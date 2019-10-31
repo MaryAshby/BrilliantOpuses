@@ -1,6 +1,8 @@
-var resValue = $("form").serialize(value) 
+var resValue= new FormData(document.getElementById("form"));
 
-var key = ".json?api-key=1koWnqTA52klgXEgxygUqAjVc372SrnL"
+var inputValue = form.get("inputTypeName");
+
+var key = ".json?api-key=1koWnqTA52klgXEgxygUqAjVc372SrnL";
 
 var baseURL =  "https://api.nytimes.com/svc/books/v3/lists/current/"
 
