@@ -1,6 +1,6 @@
 body
 {
-width: 1000px;
+width: 800px;
   background-image: url("background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -20,7 +20,7 @@ width: 1000px;
   padding: 14px 25px;
   text-align: center;
   display: inline-block;
- border-radius: 20px;
+  border-radius: 10px;
 }
 
 .Notes a:hover, a:active
@@ -35,7 +35,7 @@ h1
  font-style: bold;
  background-color: #E5D3BB;
  text-align: center;
- border-radius: 15px;
+ border-radius: 10px;
 }
 
 p
@@ -44,13 +44,13 @@ p
  font-size: 18px;
  background-color: #E5D3BB;
  padding-left: 15px;
- border-radius: 15px;
+ border-radius: 5px;
  text-align: center;
 }
 
 /*form*/
 
-bsListDrop
+.bsListDrop
 {
  font-family: Arial;
  font-size: 18px;
@@ -62,8 +62,8 @@ bsListDrop
 
 label
 {
-font-family: Arial;
-font-size: 18px;
+ font-family: Arial;
+ font-size: 18px;
  padding: 6px 20px;
  border: 1px solid #E5D3BB;
  border-top-right-radius: 25px; 
@@ -96,12 +96,13 @@ input[type=submit]
 
 /*table*/
 
-table, th, td
+table
 {
   font-size: 18px;
   background-color: #E5D3BB;
   border: 5px solid #18586F;
   width: 100%;
+  border-radius: 10px;
   border-collapse: collapse;
 }
 
