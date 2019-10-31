@@ -1,6 +1,7 @@
 
 
-var listPromise = d3.json("https://api.nytimes.com/svc/books/v3/ists/current/hardcover-fiction.json?api-key=1koWnqTA52klgXEgxygUqAjVc372SrnL");
+var listPromise = 
+    d3.json("https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction.json?api-key=1koWnqTA52klgXEgxygUqAjVc372SrnL");
          listPromise.then(function(listData)
 {
           console.log ("works", listData);
