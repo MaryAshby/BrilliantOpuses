@@ -5,66 +5,82 @@ var setgoodNews = function(message)
     d3.select(".goodNews").text(message);
 }
 
-var listPromise = 
-    d3.json("https://api.nytimes.com/svc/books/v3/lists/current/combined-print-and-e-book-fiction.json?api-key=1koWnqTA52klgXEgxygUqAjVc372SrnL");
-         listPromise.then(function(listData)
-{
-          console.log ("works1", listData);
+//onclick call//
+
+var getData = firstFunction() 
+{   
+   
+if (value = "combined-print-and-e-book-fiction")
+{     
+         d3.json("https://api.nytimes.com/svc/books/v3/lists/current/combined-print-and-e-book-fiction.json?api-key=1koWnqTA52klgXEgxygUqAjVc372SrnL");
+         listPromise.then(function(listData));
+                          {
+          console.log ("works", listData);
                setgoodNews("Data has successfully loaded");
              
 },
           function(err)
 {
-          console.log("broke1",err);
+          console.log("broke",err);
              setgoodNews("Houston, we have a problem.");
              
 })
-                         
-var listPromise = 
-    d3.json("https://api.nytimes.com/svc/books/v3/lists/current/combined-print-and-e-book-nonfiction.json?api-key=1koWnqTA52klgXEgxygUqAjVc372SrnL");
-         listPromise.then(function(listData)
-{
-          console.log ("works2", listData);
+    
+else if (value = "combined-print-and-e-book-nonfiction")
+    {
+         d3.json("https://api.nytimes.com/svc/books/v3/lists/current/combined-print-and-e-book-nonfiction.json?api-key=1koWnqTA52klgXEgxygUqAjVc372SrnL");
+         listPromise.then(function(listData);
+                          {
+          console.log ("works", listData);
+               setgoodNews("Data has successfully loaded");
+             
 },
           function(err)
 {
-          console.log("broke2",err);
+          console.log("broke",err);
+             setgoodNews("Houston, we have a problem.");
+             
+})
+  
+    
+else if (value="young-adult-hardcover")
+{
+         d3.json("https://api.nytimes.com/svc/books/v3/lists/current/young-adult-hardcover.json?api-key=1koWnqTA52klgXEgxygUqAjVc372SrnL");
+         listPromise.then(function(listData)
+          {
+          console.log ("works", listData);
+               setgoodNews("Data has successfully loaded");
+             
+},
+          function(err)
+{
+          console.log("broke",err);
+             setgoodNews("Houston, we have a problem.");
+             
 })
 
-var listPromise = 
-    d3.json("https://api.nytimes.com/svc/books/v3/lists/current/young-adult-hardcover.json?api-key=1koWnqTA52klgXEgxygUqAjVc372SrnL");
-         listPromise.then(function(listData)
+    
+       
+else if (value="graphic-books-and-manga")
 {
-          console.log ("works3", listData);
+     d3.json("https://api.nytimes.com/svc/books/v3/lists/current/graphic-books-and-manga.json?api-key=1koWnqTA52klgXEgxygUqAjVc372SrnL");
+         listPromise.then(function(listData)
+                          {
+          console.log ("works", listData);
+               setgoodNews("Data has successfully loaded");
+             
 },
           function(err)
 {
-          console.log("broke3",err);
+          console.log("broke",err);
+             setgoodNews("Houston, we have a problem.");
+             
 })
 
- var listPromise = 
-    d3.json("https://api.nytimes.com/svc/books/v3/lists/current/graphic-books-and-manga.json?api-key=1koWnqTA52klgXEgxygUqAjVc372SrnL");
-         listPromise.then(function(listData)
-{
-          console.log ("works4", listData);
-},
-          function(err)
-{
-          console.log("broke4",err);
-})           
-
-//onclick call//
-function firstFunction() {
-  var x = document.createElement("FORM");
-  x.setAttribute("Author", "myForm");
-  document.body.appendChild(x);
-
-  var y = document.createElement("INPUT");
-  y.setAttribute("type", "text");
-  document.getElementById("myForm").appendChild(y);
-}
+       return makeTable
 
 //Table Creation//
+//makes header and allows sort by headers//
 
 var sortColumn = function(books, col, accessor)
 {
@@ -79,19 +95,20 @@ var sortColumn = function(books, col, accessor)
     })
 }
 
-//makes header and allows sort by headers//
-
 var makeTableHeader = function(books)
-{d3.select("#rank")
-   .on("click", function()
+{
+    d3.select("#rank")
+      .on("click", function()
        {
         makeTable(books.sort(function(a, b)
                              {
                               return a-b
-                             }), "ALL")
+                              }), "ALL")
 })
+    
  
  //add columns & rows to table//
+    
  var addCol = function(rows, fcn)
  {
      rows.append("td").text(fcn);
