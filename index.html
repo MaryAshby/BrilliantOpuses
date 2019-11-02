@@ -14,34 +14,39 @@
 
     <h1 id="banner">Search the New York Times Best Seller Lists</h1>
     <p class="goodNews"></p>
-    <form action="#" name="first" id="BSform" onsubmit="getData()"> 
+   
+    <form name="first" id="BSform" onsubmit="getData"> 
       <p>
-        Select the current Best Seller Lists you would like to search.
+        Select the current Best Seller Lists you would like to explore.
       </p>
       
       <div class="bsListDrop">
         
-         <input type="checkbox"  name="List" value="combined-print-and-e-book-fiction"> Print & eBook Fiction<br>
-         <input type="checkbox"  name="List" value="combined-print-and-e-book-nonfiction"> Print & eBook Non-Fiction<br>
+         <input type="checkbox" name="List" value="combined-print-and-e-book-fiction"> Print & eBook Fiction<br>
+         <input type="checkbox" name="List" value="combined-print-and-e-book-nonfiction"> Print & eBook Non-Fiction<br>
          <input type="checkbox" name="List" value="young-adult-hardcover"> Young Adult Hardcover<br>
          <input type="checkbox" name="List" value="graphic-books-and-manga"> Graphic Novels & Manga<br>   
            
       </div>
-<br/>
-      <input type="submit" value="Submit">
+<br>
+      <input id="whatItBe" type="submit" value="Submit">
       
     </form>
     
   
       <table id="putHere">
-       <thead>
+        
+       <thead id="tableHead">
+         
            <th id="rank">Rank</th>
            <th id="title">Title</th>
            <th id="author">Author</th>
-           <th id="description">Description</th>    
+           <th id="description">Description</th> 
+         
        </thead> 
         
-       <tbody>
+       <tbody id = tBodyStuff">
+                              
        </tbody> 
         
         
