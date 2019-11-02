@@ -1,83 +1,9 @@
-/*load all data and make sure it works*/
+//load all data and make sure it works//
 
 var setgoodNews = function(message)
 {
     d3.select(".goodNews").text(message);
 }
-
-//onclick call//
-
-var getData = firstFunction() 
-{   
-   
-if (value = "combined-print-and-e-book-fiction")
-{     
-         d3.json("https://api.nytimes.com/svc/books/v3/lists/current/combined-print-and-e-book-fiction.json?api-key=1koWnqTA52klgXEgxygUqAjVc372SrnL");
-         listPromise.then(function(listData));
-                          {
-          console.log ("works", listData);
-               setgoodNews("Data has successfully loaded");
-             
-},
-          function(err)
-{
-          console.log("broke",err);
-             setgoodNews("Houston, we have a problem.");
-             
-})
-    
-else if (value = "combined-print-and-e-book-nonfiction")
-    {
-         d3.json("https://api.nytimes.com/svc/books/v3/lists/current/combined-print-and-e-book-nonfiction.json?api-key=1koWnqTA52klgXEgxygUqAjVc372SrnL");
-         listPromise.then(function(listData);
-                          {
-          console.log ("works", listData);
-               setgoodNews("Data has successfully loaded");
-             
-},
-          function(err)
-{
-          console.log("broke",err);
-             setgoodNews("Houston, we have a problem.");
-             
-})
-  
-    
-else if (value="young-adult-hardcover")
-{
-         d3.json("https://api.nytimes.com/svc/books/v3/lists/current/young-adult-hardcover.json?api-key=1koWnqTA52klgXEgxygUqAjVc372SrnL");
-         listPromise.then(function(listData)
-          {
-          console.log ("works", listData);
-               setgoodNews("Data has successfully loaded");
-             
-},
-          function(err)
-{
-          console.log("broke",err);
-             setgoodNews("Houston, we have a problem.");
-             
-})
-
-    
-       
-else if (value="graphic-books-and-manga")
-{
-     d3.json("https://api.nytimes.com/svc/books/v3/lists/current/graphic-books-and-manga.json?api-key=1koWnqTA52klgXEgxygUqAjVc372SrnL");
-         listPromise.then(function(listData)
-                          {
-          console.log ("works", listData);
-               setgoodNews("Data has successfully loaded");
-             
-},
-          function(err)
-{
-          console.log("broke",err);
-             setgoodNews("Houston, we have a problem.");
-             
-})
-
-       return makeTable
 
 //Table Creation//
 //makes header and allows sort by headers//
@@ -89,7 +15,7 @@ var sortColumn = function(books, col, accessor)
           {
           books.sort(function(a,b)
                      {
-                     return(accessor(a)accessor(b));
+                     return(a-b);
                      })
         makeTable(books,"ALL");
     })
@@ -102,9 +28,10 @@ var makeTableHeader = function(books)
        {
         makeTable(books.sort(function(a, b)
                              {
-                              return a-b
+                              return a,b
                               }), "ALL")
 })
+}
     
  
  //add columns & rows to table//
@@ -136,8 +63,87 @@ var makeTableHeader = function(books)
      addCol(rows, function(books){return results.book_details.author})
      addCol(rows, function(books){return results.book_details.description})
      
+ }
+     
 
      
+
+//onclick call//
+
+var getData = firstFunction() 
+{   
+   
+if (whatItBe = "combined-print-and-e-book-fiction")
+{     
+         d3.json("https://api.nytimes.com/svc/books/v3/lists/current/combined-print-and-e-book-fiction.json?api-key=1koWnqTA52klgXEgxygUqAjVc372SrnL");
+         listPromise.then(function(listData));
+                          {
+          console.log ("works", listData);
+               setgoodNews("Data has successfully loaded");
+             
+},
+          function(err)
+{
+          console.log("broke",err);
+             setgoodNews("Houston, we have a problem.");
+             
+})
+    
+else if (whatItBe = "combined-print-and-e-book-nonfiction")
+    {
+         d3.json("https://api.nytimes.com/svc/books/v3/lists/current/combined-print-and-e-book-nonfiction.json?api-key=1koWnqTA52klgXEgxygUqAjVc372SrnL");
+         listPromise.then(function(listData);
+                          {
+          console.log ("works", listData);
+               setgoodNews("Data has successfully loaded");
+             
+},
+          function(err)
+{
+          console.log("broke",err);
+             setgoodNews("Houston, we have a problem.");
+             
+})
+  
+    
+else if (whatItBe="young-adult-hardcover")
+{
+         d3.json("https://api.nytimes.com/svc/books/v3/lists/current/young-adult-hardcover.json?api-key=1koWnqTA52klgXEgxygUqAjVc372SrnL");
+         listPromise.then(function(listData)
+          {
+          console.log ("works", listData);
+               setgoodNews("Data has successfully loaded");
+             
+},
+          function(err)
+{
+          console.log("broke",err);
+             setgoodNews("Houston, we have a problem.");
+             
+})
+
+    
+       
+else if (whatItBe="graphic-books-and-manga")
+{
+     d3.json("https://api.nytimes.com/svc/books/v3/lists/current/graphic-books-and-manga.json?api-key=1koWnqTA52klgXEgxygUqAjVc372SrnL");
+         listPromise.then(function(listData)
+                          {
+          console.log ("works", listData);
+               setgoodNews("Data has successfully loaded");
+             
+},
+          function(err)
+{
+          console.log("broke",err);
+             setgoodNews("Houston, we have a problem.");
+             
+})
+
+       return makeTable
+}
+
+
   
  
                              
