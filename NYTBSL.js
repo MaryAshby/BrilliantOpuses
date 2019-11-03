@@ -23,6 +23,7 @@ var sorter = function sortTable(n)
                         shouldSwitch = false;
                         x = rows[i].getElementsByTagName("TD")[n];
                         y = rows[i + 1].getElementsByTagName("TD")[n];
+                 /*check if works then add other headers*/
                          
       /* Check if 2 rows should switch place */
                          
@@ -58,3 +59,21 @@ var sorter = function sortTable(n)
     }
   }
 }
+
+/*Data promise*/
+
+var getData = firstFunction() 
+{   
+   
+if (#whatItBe = "combined-print-and-e-book-fiction")
+{     
+         d3.json("https://api.nytimes.com/svc/books/v3/lists/current/combined-print-and-e-book-fiction.json?api-key=1koWnqTA52klgXEgxygUqAjVc372SrnL");
+         listPromise.then(function(listData));
+                          {
+          console.log ("works", listData);
+               setgoodNews("Data has successfully loaded");
+             
+}
+      return getData;
+}
+
