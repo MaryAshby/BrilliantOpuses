@@ -109,7 +109,7 @@ var bookPromise=d3.json("https://api.nytimes.com/svc/books/v3/lists/current/comb
     },
       function(err)
       {
-        setBanner "Lists are unavailable");
+        setBanner ("Lists are unavailable");
       });
 
  
