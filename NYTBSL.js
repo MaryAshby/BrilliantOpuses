@@ -2,7 +2,9 @@
 
 var setBanner = function(message)
 {
-    d3.select("#setBanner").text(message);
+    d3.select("#banner").text(message);
+    
+    
 }
 
 /*table work*/
@@ -47,6 +49,8 @@ var filterResults = function(results,mode)
     {
         return results;       
     }
+}
+
     
 var addCol = function(rows,fcn)
 {
@@ -56,10 +60,10 @@ var addCol = function(rows,fcn)
 var makeTable = function(results,mode)
 {
     d3.selectAll("tbody *").remove();
-  
+  console.log (results)
     var rows = d3.select("tbody")
     .selectAll("tr")
-    .data(filterResults(results,mode))
+    .data(results)
     .enter()
     .append("tr");
     
@@ -86,17 +90,18 @@ var drawDetails = function(results)
     
 }
 
-/*Data promise*/
+
  
  
 var booksPromise = 
              d3.json("https://api.nytimes.com/svc/books/v3/lists/current/combined-print-and-e-book-fiction.json?api-key=1koWnqTA52klgXEgxygUqAjVc372SrnL")
+console.log (booksPromise)
     booksPromise.then(function(results)
-    {
+    { console.log ("got ittt", results)
       setBanner("Ready to Explore");
-      makeTableHeader(results);
-      makeTable(results, "ALL")
-      setInfo(results);
+      makeTableHeader(results.results.books);
+      makeTable(results.results.books, "ALL")
+      //setInfo(results);//
     },
       function(err)
       {
