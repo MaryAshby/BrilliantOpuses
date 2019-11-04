@@ -60,6 +60,30 @@ var sorter = function sortTable(n)
   }
 }
 
+//add columns & rows to table//
+    
+ var addCol = function(rows, fcn)
+ {
+     rows.append("td").text(fcn);
+ }
+ 
+ 
+ var makeTable = function(books, mode)
+ {
+     d3.selectAll("tbody *").remove();
+     
+     var rows = d3.select("tbody")
+                  .selectAll("tr")
+                  .data(filterbooks(books, mode))
+                  .enter()
+                  .append("tr");
+   
+     addCol(rows, function(books){return results.rank})
+     addCol(rows, function(books){return results.book_details.title})
+     addCol(rows, function(books){return results.book_details.author})
+     addCol(rows, function(books){return results.book_details.description})
+ }
+
 /*Data promise*/
 
 var getData = firstFunction() 
