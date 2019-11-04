@@ -85,11 +85,11 @@ input[type=text]
 input[type=submit]
 {
   font-size: 16px;
-  background-color:  #E5D3BB;
+  background-color:  ##85a083;
   padding: 14px 25px;
   text-align: center;
   display: inline-block;
-  border: 1px solid #E5D3BB;
+  border: 1px solid #85a083;
  border-top-right-radius: 25px;
   width: 100%;
 }
