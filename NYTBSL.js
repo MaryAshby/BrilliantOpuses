@@ -31,26 +31,17 @@ var makeTableHeader = function(results)
         {
             if(a.rank ==b.rank ) { return 0; }
             if(a.rank < b.rank ) { return -1; }
-            if(a.rank > b.rnak ) { return 1; }
+            if(a.rank > b.rank ) { return 1; }
         }))    
     })
     
     /*check first line*/
     
     sortColumn(results,"#rank",function(r){return r.results.rank});
-    sortColumn(results,"#title",function(r){return r.results.book_details.author});
-    sortColumn(results,"#author",function(r){return r.results.book_details.title});
-    sortColumn(results,"#description",function(r){return r.results.book_details.description});
+    sortColumn(results,"#author",function(r){return r.results.author});
+    sortColumn(results,"#title",function(r){return r.results.title});
+    sortColumn(results,"#description",function(r){return r.results.description});
 }
-
-var filterResults = function(results,mode)
-{
-    if(mode=="ALL")
-    {
-        return results;       
-    }
-}
-
     
 var addCol = function(rows,fcn)
 {
@@ -90,9 +81,6 @@ var drawDetails = function(results)
     
 }
 
-
- 
- 
 var booksPromise = 
              d3.json("https://api.nytimes.com/svc/books/v3/lists/current/combined-print-and-e-book-fiction.json?api-key=1koWnqTA52klgXEgxygUqAjVc372SrnL")
 console.log (booksPromise)
@@ -101,7 +89,6 @@ console.log (booksPromise)
       setBanner("Ready to Explore");
       makeTableHeader(results.results.books);
       makeTable(results.results.books, "ALL")
-      //setInfo(results);//
     },
       function(err)
       {
