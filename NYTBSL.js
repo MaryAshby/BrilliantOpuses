@@ -69,9 +69,9 @@ var makeTable = function(results,mode)
     
     
     addCol(rows,function(results){return results.rank})        
-    addCol(rows,function(results){return results.book_details.title})
-    addCol(rows,function(results){return results.book_details.author})
-    addCol(rows,function(results){return results.book_details.description})
+    addCol(rows,function(results){return results.title})
+    addCol(rows,function(results){return results.author})
+    addCol(rows,function(results){return results.description})
 }
 
 var drawDetails = function(results)
@@ -81,12 +81,12 @@ var drawDetails = function(results)
     
     var box = d3.select("#book_info");
     
-    box.append("div").attr("class","rank").text(results.rank)
+    box.append("div").attr("class","rank").text(rank)
     var info  = box.append("div").attr("class","info")
 
-    info.append("div").text(results.book_details.author);
-    info.append("div").text(results.book_details.title);
-    info.append("div").text(results.book_details.description);
+    info.append("div").text(author);
+    info.append("div").text(title);
+    info.append("div").text(description);
     
 }
 
