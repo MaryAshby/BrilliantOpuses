@@ -38,61 +38,17 @@ h1
 border-top-right-radius: 25px;
 }
 
-p
+h2
 {
  font-family: Arial;
  font-size: 18px;
  background-color: #E5D3BB;
  padding: 14px 25px;
- border-top-right-radius: 25px;
+ border-bottom-right-radius: 25px;
  text-align: center;
 }
 
-/*form*/
 
-.bsListDrop
-{
- font-family: Arial;
- font-size: 18px;
- padding: 25px 50px;
- border: 1px solid #E5D3BB;
- border-top-right-radius: 25px; 
- background-color: #E5D3BB;
-}
-
-label
-{
- font-family: Arial;
- font-size: 18px;
- padding: 6px 20px;
- border: 1px solid #E5D3BB;
- border-top-right-radius: 25px; 
- background-color: #E5D3BB;
-}
-
-input[type=text]
-{
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #c7f0db;
-  border-top-right-radius: 25px;
-  box-sizing: border-box;
- background-color: white;
-}
-
-input[type=submit]
-{
-  font-size: 16px;
-  background-color:  ##85a083;
-  padding: 14px 25px;
-  text-align: center;
-  display: inline-block;
-  border: 1px solid #85a083;
- border-top-right-radius: 25px;
-  width: 100%;
-}
 
 /*table*/
 
