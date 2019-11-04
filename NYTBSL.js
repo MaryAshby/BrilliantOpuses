@@ -1,116 +1,105 @@
-/*Check load of data. Use var to make easy retrival of 
-message depending on later promise and put it in p class goodNews*/
+/*load all data and make sure it works*/
 
 var setBanner = function(message)
-                  {
-                   d3.select("#banner").text(message);
-                   }
-
-var setInfo=(function(books)
-             {
-  d3.select("#book_stuff *").remove();
-  var box=d3.select("#book_stuff");
-  box.append("div").attr("class", "title").text(results.book_details.title)
-  var info=box.append("div").attr("class", "info")
-  info.append("div").text("author:   " + results.book_details.author);
-             }
-             
-
-//Make table header sort - used switching as described by 3wSchool//
-
-
-
-var sorter = function sortTable(n) 
-      {
-               var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
-               table = document.getElementById("putHere");
-               switching = true;
-               dir = "asc";
-               while (switching) 
-                   {
-                    switching = false;
-                    rows = table.rows;
-                    for (i = 1; i < (rows.length - 1); i++) 
-                       {
-                        shouldSwitch = false;
-                        x = rows[i].getElementsByTagName("TD")[n];
-                        y = rows[i + 1].getElementsByTagName("TD")[n];
-                       }
-                 /*check if works then add other headers*/
-                         
-      /* Check if 2 rows should switch place */
-                         
-            if (dir == "asc") 
-                  {
-                  if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) 
-                        {
-                        shouldSwitch = true;
-                        break;
-                        }
-                  } 
-            else if (dir == "desc") 
-                {
-                if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) 
-                      {
-                      shouldSwitch = true;
-                      break;
-                      }
-                }
-          }
-    if (shouldSwitch) 
-        {
-        rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
-        switching = true;
-        switchcount ++;
-        } 
-     else 
-        {
-        if (switchcount == 0 && dir == "asc") 
-        {
-        dir = "desc";
-        switching = true;
-        }
-    }
-  }
+{
+    d3.select("#setBanner").text(message);
 }
 
-//add columns & rows to table//
+/*table work*/
+
+var sortColumn = function(results,col,accessor)
+{
+      d3.select(col)
+        .on("click",function()
+    {
+        results.sort(function(a,b) 
+        { 
+            return (accessor(a)-accessor(b));
+        })
+        makeTable(results, "ALL");
+    })
+}
+
+var makeTableHeader = function(results)
+{
+    d3.select("#rank")
+        .on("click",function()
+    {
+        makeTable(results.sort(function(a,b)
+        {
+            if(a.rank ==b.rank ) { return 0; }
+            if(a.rank < b.rank ) { return -1; }
+            if(a.rank > b.rnak ) { return 1; }
+        }))    
+    })
     
- var addCol = function(rows, fcn)
- {
-     rows.append("td").text(fcn);
- }
- 
- 
- var makeTable = function(books, mode)
- {
-     d3.selectAll("tbody *").remove();
-     
-     var rows = d3.select("tbody")
-                  .selectAll("tr")
-                  .data(filterbooks(books, mode))
-                  .enter()
-                  .append("tr");
-   
-     addCol(rows, function(books){return results.rank})
-     addCol(rows, function(books){return results.book_details.title})
-     addCol(rows, function(books){return results.book_details.author})
-     addCol(rows, function(books){return results.book_details.description})
- }
+    /*check first line*/
+    
+    sortColumn(results,"#rank",function(r){return r.results.rank});
+    sortColumn(results,"#title",function(r){return r.results.book_details.author});
+    sortColumn(results,"#author",function(r){return r.results.book_details.title});
+    sortColumn(results,"#description",function(r){return r.results.book_details.description});
+}
+
+var filterResults = function(results,mode)
+{
+    if(mode=="ALL")
+    {
+        return results;       
+    }
+    
+var addCol = function(rows,fcn)
+{
+    rows.append("td").text(fcn);
+}
+
+var makeTable = function(results,mode)
+{
+    d3.selectAll("tbody *").remove();
+  
+    var rows = d3.select("tbody")
+    .selectAll("tr")
+    .data(filterResults(results,mode))
+    .enter()
+    .append("tr");
+    
+    
+    addCol(rows,function(results){return results.rank})        
+    addCol(rows,function(results){return results.book_details.title})
+    addCol(rows,function(results){return results.book_details.author})
+    addCol(rows,function(results){return results.book_details.description})
+}
+
+var drawDetails = function(results)
+{
+    d3.selectAll("#book_info *").remove();
+    
+    
+    var box = d3.select("#book_info");
+    
+    box.append("div").attr("class","rank").text(results.rank)
+    var info  = box.append("div").attr("class","info")
+
+    info.append("div").text(results.book_details.author);
+    info.append("div").text(results.book_details.title);
+    info.append("div").text(results.book_details.description);
+    
+}
 
 /*Data promise*/
  
  
-var bookPromise=d3.json("https://api.nytimes.com/svc/books/v3/lists/current/combined-print-and-e-book-fiction.json?api-key=1koWnqTA52klgXEgxygUqAjVc372SrnL")
-    bookPromise.then(function(books)
+var booksPromise = 
+             d3.json("https://api.nytimes.com/svc/books/v3/lists/current/combined-print-and-e-book-fiction.json?api-key=1koWnqTA52klgXEgxygUqAjVc372SrnL")
+    booksPromise.then(function(results)
     {
       setBanner("Ready to Explore");
-      setInfo(books);
+      makeTableHeader(results);
+      makeTable(results, "ALL")
+      setInfo(results);
     },
       function(err)
       {
         setBanner ("Lists are unavailable");
       });
-
- 
 
