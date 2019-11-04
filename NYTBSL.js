@@ -23,6 +23,7 @@ var sorter = function sortTable(n)
                         shouldSwitch = false;
                         x = rows[i].getElementsByTagName("TD")[n];
                         y = rows[i + 1].getElementsByTagName("TD")[n];
+                       }
                  /*check if works then add other headers*/
                          
       /* Check if 2 rows should switch place */
@@ -52,7 +53,8 @@ var sorter = function sortTable(n)
         } 
      else 
         {
-        if (switchcount == 0 && dir == "asc") {
+        if (switchcount == 0 && dir == "asc") 
+        {
         dir = "desc";
         switching = true;
         }
