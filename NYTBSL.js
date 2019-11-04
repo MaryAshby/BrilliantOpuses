@@ -1,12 +1,24 @@
 /*Check load of data. Use var to make easy retrival of 
 message depending on later promise and put it in p class goodNews*/
 
-var setgoodNews = function(message)
+var setBanner = function(message)
                   {
-                   d3.select(".goodNews").text(message);
+                   d3.select("#banner").text(message);
                    }
 
+var setInfo=(function(books)
+             {
+  d3.select("#book_stuff *").remove();
+  var box=d3.select("#book_stuff");
+  box.append("div").attr("class", "title").text(results.book_details.title)
+  var info=box.append("div").attr("class", "info")
+  info.append("div").text("author:   " + results.book_details.author);
+             }
+             
+
 //Make table header sort - used switching as described by 3wSchool//
+
+
 
 var sorter = function sortTable(n) 
       {
@@ -87,19 +99,18 @@ var sorter = function sortTable(n)
  }
 
 /*Data promise*/
+ 
+ 
+var bookPromise=d3.json(https://api.nytimes.com/svc/books/v3/lists/current/combined-print-and-e-book-fiction.json?api-key=1koWnqTA52klgXEgxygUqAjVc372SrnL)
+    bookPromise.then(function(books)
+    {
+      setBanner("Ready to Explore");
+      setInfo(books);
+    },
+      function(err)
+      {
+        setBanner "Lists are unavailable");
+      });
 
-var getData = firstFunction() 
-{   
-   
-if (#whatItBe = "combined-print-and-e-book-fiction")
-{     
-         d3.json("https://api.nytimes.com/svc/books/v3/lists/current/combined-print-and-e-book-fiction.json?api-key=1koWnqTA52klgXEgxygUqAjVc372SrnL");
-         listPromise.then(function(listData));
-                          {
-          console.log ("works", listData);
-               setgoodNews("Data has successfully loaded");
-             
-}
-      return getData;
-}
+ 
 
