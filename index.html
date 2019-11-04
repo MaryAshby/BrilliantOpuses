@@ -12,46 +12,27 @@
   <a href="Notes.html">NOTES</a>
     </div>
 
-    <h1>Search the New York Times Best Seller Lists</h1>
-    <h1 id="banner"></h1>
-   
-    <form name="first" id="BSform" onsubmit="getData"> 
-      <p>
-        Select the current Best Seller Lists you would like to explore.
-      </p>
-      
-      <div class="bsListDrop">
-        
-         <input type="checkbox" name="List" value="combined-print-and-e-book-fiction"> Print & eBook Fiction<br>
-         <input type="checkbox" name="List" value="combined-print-and-e-book-nonfiction"> Print & eBook Non-Fiction<br>
-         <input type="checkbox" name="List" value="young-adult-hardcover"> Young Adult Hardcover<br>
-         <input type="checkbox" name="List" value="graphic-books-and-manga"> Graphic Novels & Manga<br>   
-           
-      </div>
-<br>
-      <input id="whatItBe" type="submit" value="Submit">
-      
-    </form>
-    
+    <h1>Explore the New York Times Best Selling Fiction List</h1>
+      <h2 id="banner"></h2>
+
     <div id="book_stuff"></div>
-    
-      <table id="putHere">
-        
-       <thead id="tableHead">
-         
-           <th onclick="sortTable(0)" id="rank">Rank</th>
-           <th onclick="sortTable(1)" id="title">Title</th>
-           <th onclick="sortTable(2)" id="author">Author</th>
-           <th onclick="sortTable(3)" id="description">Description</th> 
-         
+    <div id="book_info"></div>
+     
+      <table>
+          
+       <thead>
+           <th id="rank">Rank</th>
+           <th id="author">Author</th>
+           <th id="title">Title</th>
+           <th id="description">Description</th>    
        </thead> 
         
-       <tbody id = tBodyStuff">
-                              
+       <tbody>
        </tbody> 
         
         
-      </table>
+      </table>         
+
       
    
   </body>
