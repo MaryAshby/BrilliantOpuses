@@ -101,7 +101,7 @@ var sorter = function sortTable(n)
 /*Data promise*/
  
  
-var bookPromise=d3.json(https://api.nytimes.com/svc/books/v3/lists/current/combined-print-and-e-book-fiction.json?api-key=1koWnqTA52klgXEgxygUqAjVc372SrnL)
+var bookPromise=d3.json("https://api.nytimes.com/svc/books/v3/lists/current/combined-print-and-e-book-fiction.json?api-key=1koWnqTA52klgXEgxygUqAjVc372SrnL")
     bookPromise.then(function(books)
     {
       setBanner("Ready to Explore");
